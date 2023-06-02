@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:behavior_hideable="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentBottom="true"
+    android:layout_centerVertical="true"
+    android:fillViewport="true"
+    android:id="@+id/bottom_sheet_container"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:layout_constraintBottom_toBottomOf="parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        android:background="@drawable/sheet_dialog_shape">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="3.5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/view_background">
+
+        </View>
+
+
+        <FrameLayout
+            android:layout_marginTop="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/switch_txt"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:text="Switch to professionel mode"
+                android:textColor="@color/text_color"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppins_bold">
+
+            </TextView>
+
+            <Switch
+                android:id="@+id/switch_icon"
+                android:drawableTint="@color/main_blue"
+                android:buttonTint="@color/main_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+
+                >
+
+            </Switch>
+
+        </FrameLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/text_color"
+            android:textAlignment="textStart"
+            android:text="Select your fields :"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center"
+            android:layout_gravity="center">
+            
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_gravity="center_horizontal"
+              android:gravity="center_horizontal">
+
+
+              <CheckBox
+                  android:theme="@style/ThemeOverlay.AppCompat.Light"
+                  android:id="@+id/mobile_dev"
+                  android:drawableTint="@color/secondary_color"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="start"
+                  android:text="mobile developer"
+                  android:background="@null"
+                  android:button="@null"
+                  android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                  android:textColor="@color/text_color"
+                  android:textSize="16dp"
+                  android:fontFamily="@font/poppins_medium"
+                  >
+
+              </CheckBox>
+
+              <CheckBox
+                  android:theme="@style/ThemeOverlay.AppCompat.Light"
+                  android:layout_gravity="end"
+                  android:id="@+id/designer"
+                  android:drawableTint="@color/secondary_color"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="designer"
+                  android:background="@null"
+                  android:button="@null"
+                  android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                  android:textColor="@color/text_color"
+                  android:textSize="16dp"
+                  android:fontFamily="@font/poppins_medium"
+                  >
+
+              </CheckBox>
+
+
+          </FrameLayout>
+
+
+            <CheckBox
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:id="@+id/web_dev"
+                android:drawableTint="@color/secondary_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="web developer"
+                android:background="@null"
+                android:button="@null"
+                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                android:textColor="@color/text_color"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppins_medium"
+                >
+
+            </CheckBox>
+            
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/switch_submit"
+            android:layout_marginTop="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="60dp"
+            android:layout_marginHorizontal="35dp"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:background="@drawable/sheet_dialog_btn_shape"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            >
+
+        </Button>
+
+    </LinearLayout>
+
+</ScrollView>

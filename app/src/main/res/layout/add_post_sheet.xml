@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:behavior_hideable="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentBottom="true"
+    android:layout_centerVertical="true"
+    android:fillViewport="true"
+    android:id="@+id/bottom_sheet_container"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:layout_constraintBottom_toBottomOf="parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        android:background="@drawable/add_post_sheet_dialog_shape">
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="3.5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/view_background">
+
+        </View>
+
+        <TextView
+            android:id="@+id/switch_txt"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Do you want to post .."
+            android:textColor="@color/text_color"
+            android:textSize="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_semibold">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_selector"
+            android:padding="15dp"
+            android:layout_marginHorizontal="12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_image"
+                android:scaleType="centerCrop">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/single_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Single photo">
+
+            </TextView>
+        </LinearLayout   >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:padding="15dp"
+            android:background="@drawable/shape_selector"
+            android:layout_marginHorizontal="12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_image_multiple"
+                android:scaleType="centerCrop">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/multiple_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Multiples photos">
+
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

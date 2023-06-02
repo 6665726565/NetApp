@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ThemeOverlay.AppCompat.Light"
+    android:background="@color/background_white"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/on_board_back_btn_shape"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_previous"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/skipTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            android:fontFamily="@font/poppins"
+            android:textSize="16dp"
+            android:visibility="visible"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="25dp"
+            android:textColor="@color/text4">
+
+        </TextView>
+
+
+    </FrameLayout>
+
+
+
+    <Button
+        android:id="@+id/onBoardingBtn"
+        android:layout_width="99dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="15dp"
+
+        android:textAllCaps="false"
+
+        android:textColor="@color/background_white"
+        android:background="@drawable/on_board_back_btn_shape"
+
+        android:textSize="16dp"
+        android:fontFamily="@font/poppins_medium"
+
+        android:text="Next"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+    </Button>
+
+    <Button
+        android:visibility="visible"
+        android:id="@+id/getStartedBtn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="50dp"
+
+        android:background="@drawable/on_board_back_btn_shape"
+        android:fontFamily="@font/poppins_medium"
+
+        android:text="Get Started"
+        android:textAllCaps="false"
+
+        android:textColor="@color/background_white"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </Button>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/onBoardingBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dots_indicator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="25dp"
+        app:dotsColor="@color/grey"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="8dp"
+        app:dotsSpacing="4dp"
+        app:dotsWidthFactor="2.5"
+        app:layout_constraintBottom_toBottomOf="@+id/onBoardingBtn"
+        app:layout_constraintEnd_toStartOf="@+id/onBoardingBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/onBoardingBtn"
+        app:progressMode="false"
+        app:selectedDotColor="@color/main_blue" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

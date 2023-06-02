@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "630551546234",
+    "project_id": "netapp-c3fd7",
+    "storage_bucket": "netapp-c3fd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630551546234:android:cf4067194c7015bec9eec3",
+        "android_client_info": {
+          "package_name": "com.example.net"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630551546234-uq748ui5q5vqglens0m9t9qislnrijn1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf6rrVjwi4ywmHvF9qn6L882hvtg3wqvA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630551546234-uq748ui5q5vqglens0m9t9qislnrijn1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

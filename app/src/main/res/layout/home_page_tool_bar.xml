@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
+    android:id="@+id/post_tool_bar">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+
+            <Spinner
+                android:id="@+id/post_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:inputType="none"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:spinnerMode="dropdown"
+                android:background="@null"
+                android:popupElevation="0dp"
+                android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:padding="0dp"
+                android:text="Posts"
+                android:fontFamily="@font/poppins_medium">
+
+            </Spinner>
+
+
+        <ImageButton
+            android:id="@+id/post_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:background="@drawable/ic_arrow_down"
+            >
+
+        </ImageButton>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/chat_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@drawable/ic_chat"
+        android:layout_marginEnd="20dp"
+        >
+
+    </ImageButton>
+
+
+</androidx.appcompat.widget.Toolbar>

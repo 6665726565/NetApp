@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="1dp"
+    android:theme="@android:style/ThemeOverlay.Material.Light"
+    android:id="@+id/post_tool_bar">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="0dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/add_post_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_arrow_previous_edt_profile">
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Share new post"
+            android:textColor="@color/text_color"
+            android:textSize="16dp"
+            android:textStyle="normal">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/add_post_btn"
+        android:layout_gravity="end"
+        android:layout_marginEnd="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Publish"
+        android:textAllCaps="false"
+        android:textColor="@color/main_blue"
+        android:textSize="16dp">
+
+    </TextView>
+
+
+
+
+
+</androidx.appcompat.widget.Toolbar>

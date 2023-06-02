@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Adding.AddPostActivity">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/add_post_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2">
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include2">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/add_post_profile_picture_post"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:elevation="0dp"
+                android:scaleType="centerCrop"
+                android:src="@color/background_white"
+                app:civ_border_width="0dp">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/add_post_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/text_color"
+                android:textSize="14dp">
+
+            </TextView>
+
+                <TextView
+                    android:id="@+id/add_post_user_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/text2"
+                    android:textSize="12dp">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/add_post_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Add a caption.."
+            android:textColorHint="@color/grey"
+            android:inputType="textMultiLine"
+            android:textAlignment="textStart"
+            android:textColor="@color/text_color"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/add_post_card_view"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="16dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_post_description">
+
+            <ImageView
+                android:id="@+id/add_post_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_white"
+                android:scaleType="centerCrop">
+
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="@color/text_color"
+            android:textAlignment="textStart"
+            android:text="Select fields :"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="62dp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_marginTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp"
+            android:layout_marginHorizontal="12dp"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal">
+
+                <CheckBox
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    android:id="@+id/add_post_mobile_dev"
+                    android:drawableTint="@color/main_blue3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="mobile developement"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                    android:textColor="@color/text_color"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/poppins"
+                    >
+
+                </CheckBox>
+
+                <CheckBox
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    android:id="@+id/add_post_design"
+                    android:drawableTint="@color/main_blue3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="design"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                    android:textColor="@color/text_color"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/poppins"
+                    >
+
+                </CheckBox>
+
+
+            </FrameLayout>
+
+
+            <CheckBox
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:id="@+id/add_post_web_developement"
+                android:drawableTint="@color/main_blue3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="web developement"
+                android:background="@null"
+                android:button="@null"
+                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/poppins"
+                >
+
+            </CheckBox>
+        </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
